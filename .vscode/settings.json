@@ -1,5 +1,5 @@
 {
     "python.analysis.extraPaths": [
-        "./lib/easygui/build/lib/easygui"
+        "./lib/easygui"
     ]
 }
