@@ -76,7 +76,7 @@ def recursive_scrapper():
 
 # GUI creation
 msg = "Enter required * information"
-title = "BI GMaps Scrapper"
+title = "ANGEL J ROMERO  GMaps Scrapper"
 fieldNames = ["Folder Name * (Enter City Name)",
               "Lifestyle Indicator Name *",
               "Places * (Separate each place with a ('$') dollar)"]
