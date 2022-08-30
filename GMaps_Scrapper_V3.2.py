@@ -107,7 +107,7 @@ print ("visit 'chrome://settings/content' to disable images")
 sleep(20)
 for place in places_arr:
     place = place.strip()
-    print place
+    print (place)
     place_in_link = sub(r"\s+", '+', place)
     chrome.visit("https://www.google.co.in/maps/search/" + lifestyle_indicator_in_link.strip() + "+in+" +
                  place_in_link.strip() + "/@13.0318799,80.1985061,21z")
