@@ -70,7 +70,7 @@ def recursive_scrapper():
             except:
                 file_handler.close()
     else:
-        print "No data Available"
+        print ("No data Available")
         file_handler.close()
 
 
@@ -100,10 +100,10 @@ folder_name = "XLS\\" + fieldValues[0].lower()
 lifestyle_indicator = fieldValues[1].lower()
 lifestyle_indicator_in_link = sub(r"\s+", '+', lifestyle_indicator)
 places = fieldValues[2]
-print "Connecting To Google Maps..."
+print ("Connecting To Google Maps...")
 places_arr = places.split("$")
 chrome = Browser("chrome")
-print "visit 'chrome://settings/content' to disable images"
+print ("visit 'chrome://settings/content' to disable images")
 sleep(20)
 for place in places_arr:
     place = place.strip()
@@ -121,6 +121,6 @@ for place in places_arr:
     file_handler.write("Name\tCategory\tAddress\tLatitude\tLongitude\n")
     recursive_scrapper()
 
-print "Successfully Scrapped All Available Data!"
-print "Disconnecting Google Maps..."
+print ("Successfully Scrapped All Available Data!")
+print ("Disconnecting Google Maps...")
 chrome.quit()
