@@ -11,6 +11,8 @@ from time import sleep
 from re import sub
 from os import path, makedirs
 
+executable_path = {'executable_path': 'C:/path/to/chromedriver.exe'}
+
 
 # Recursive function that does the actual scrapping
 # @rtype: None
@@ -102,15 +104,15 @@ lifestyle_indicator_in_link = sub(r"\s+", '+', lifestyle_indicator)
 places = fieldValues[2]
 print ("Connecting To Google Maps...")
 places_arr = places.split("$")
-chrome = Browser("chrome")
+chrome = Browser('chrome', **executable_path)
 print ("visit 'chrome://settings/content' to disable images")
 sleep(20)
 for place in places_arr:
     place = place.strip()
     print (place)
     place_in_link = sub(r"\s+", '+', place)
-    chrome.visit("https://www.google.co.in/maps/search/" + lifestyle_indicator_in_link.strip() + "+in+" +
-                 place_in_link.strip() + "/@13.0318799,80.1985061,21z")
+    chrome.visit("https://www.google.co.ve/maps/search/" + lifestyle_indicator_in_link.strip() + "+en+" +
+                 place_in_link.strip())
     sleep(3)
     if not path.exists(folder_name):
         makedirs(folder_name)
